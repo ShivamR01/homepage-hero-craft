@@ -2,7 +2,7 @@
 import React from 'react';
 
 const Badge = ({ variant, text }) => {
-  const baseClasses = "px-6 py-2 rounded-full font-semibold text-sm tracking-wider transition-all duration-300 hover:scale-105";
+  const baseClasses = "px-4 sm:px-6 py-2 rounded-full font-semibold text-xs sm:text-sm tracking-wider transition-all duration-300 hover:scale-105";
   
   const variantClasses = {
     dark: "bg-slate-800 text-white hover:bg-slate-700",
