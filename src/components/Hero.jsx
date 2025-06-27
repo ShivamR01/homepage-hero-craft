@@ -6,11 +6,21 @@ import Badge from './Badge';
 
 const Hero = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center px-4 py-8">
-      <div className="text-center max-w-4xl mx-auto">
-        {/* Icon Section */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center px-4 py-8 relative">
+      {/* Dark themed background box */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="w-full max-w-5xl h-3/4 bg-slate-900/20 backdrop-blur-sm rounded-3xl border border-slate-200/20"></div>
+      </div>
+      
+      <div className="text-center max-w-4xl mx-auto relative z-10">
+        {/* Icon Section with blur effect */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-8 sm:mb-12">
-          <IconGrid />
+          <div className="relative">
+            <IconGrid />
+            {/* Blur overlay for half of the icon grid */}
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-900/30 backdrop-blur-md rounded-r-xl"></div>
+          </div>
+          
           <div className="relative">
             <div className="bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl border border-slate-700">
               <Shield 
@@ -21,19 +31,26 @@ const Hero = () => {
               <div className="absolute -top-2 -right-2 w-3 h-3 sm:w-4 sm:h-4 bg-blue-500 rounded-full animate-ping"></div>
               <div className="absolute -bottom-2 -left-2 w-2 h-2 sm:w-3 sm:h-3 bg-cyan-400 rounded-full"></div>
             </div>
+            {/* Blur overlay for half of the shield */}
+            <div className="absolute top-0 left-0 w-1/2 h-full bg-slate-900/40 backdrop-blur-md rounded-l-2xl"></div>
           </div>
-          <div className="bg-blue-600 rounded-xl p-3 sm:p-4 shadow-lg">
+          
+          <div className="bg-blue-600 rounded-xl p-3 sm:p-4 shadow-lg relative">
             <div className="text-white text-lg sm:text-xl font-bold">⚡</div>
+            {/* Blur overlay for part of the lightning bolt */}
+            <div className="absolute top-0 right-0 w-1/3 h-full bg-slate-900/30 backdrop-blur-sm rounded-r-xl"></div>
           </div>
         </div>
 
-        {/* Main Title */}
-        <div className="mb-6 sm:mb-8">
+        {/* Main Title with partial blur effect */}
+        <div className="mb-6 sm:mb-8 relative">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 px-2">
             <span className="text-slate-800">WEB</span>
             <span className="text-slate-400 mx-2 sm:mx-4">·</span>
-            <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent relative">
               KRAFTERY
+              {/* Blur overlay for part of KRAFTERY */}
+              <div className="absolute top-0 right-0 w-2/5 h-full bg-slate-900/25 backdrop-blur-sm"></div>
             </span>
           </h1>
         </div>
