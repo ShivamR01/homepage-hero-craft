@@ -17,8 +17,8 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-8 sm:mb-12">
           <div className="relative">
             <IconGrid />
-            {/* Blur overlay for half of the icon grid */}
-            <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-900/30 backdrop-blur-md rounded-r-xl"></div>
+            {/* Vertical blur overlay for half of the icon grid */}
+            <div className="absolute top-0 left-0 w-full h-1/2 bg-slate-900/30 backdrop-blur-md rounded-t-xl"></div>
           </div>
           
           <div className="relative">
@@ -31,14 +31,14 @@ const Hero = () => {
               <div className="absolute -top-2 -right-2 w-3 h-3 sm:w-4 sm:h-4 bg-blue-500 rounded-full animate-ping"></div>
               <div className="absolute -bottom-2 -left-2 w-2 h-2 sm:w-3 sm:h-3 bg-cyan-400 rounded-full"></div>
             </div>
-            {/* Blur overlay for half of the shield */}
-            <div className="absolute top-0 left-0 w-1/2 h-full bg-slate-900/40 backdrop-blur-md rounded-l-2xl"></div>
+            {/* Vertical blur overlay for half of the shield */}
+            <div className="absolute bottom-0 left-0 w-full h-1/2 bg-slate-900/40 backdrop-blur-md rounded-b-2xl"></div>
           </div>
           
           <div className="bg-blue-600 rounded-xl p-3 sm:p-4 shadow-lg relative">
             <div className="text-white text-lg sm:text-xl font-bold">⚡</div>
-            {/* Blur overlay for part of the lightning bolt */}
-            <div className="absolute top-0 right-0 w-1/3 h-full bg-slate-900/30 backdrop-blur-sm rounded-r-xl"></div>
+            {/* Vertical blur overlay for part of the lightning bolt */}
+            <div className="absolute top-0 left-0 w-full h-1/3 bg-slate-900/30 backdrop-blur-sm rounded-t-xl"></div>
           </div>
         </div>
 
@@ -49,8 +49,8 @@ const Hero = () => {
             <span className="text-slate-400 mx-2 sm:mx-4">·</span>
             <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent relative">
               KRAFTERY
-              {/* Blur overlay for part of KRAFTERY */}
-              <div className="absolute top-0 right-0 w-2/5 h-full bg-slate-900/25 backdrop-blur-sm"></div>
+              {/* Vertical blur overlay for part of KRAFTERY */}
+              <div className="absolute top-0 left-0 w-full h-2/5 bg-slate-900/25 backdrop-blur-sm"></div>
             </span>
           </h1>
         </div>
